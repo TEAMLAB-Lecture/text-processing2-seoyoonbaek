@@ -42,7 +42,8 @@ def to_camel_case(underscore_str):
     
             camelcase_str += temp
     else:
-        camelcase_str = ''.join(underscore_str)
+        if underscore_str:
+            camelcase_str = ''.join(underscore_str)
 
     """
     이 문제에서 첫번째 규칙 'underscore variable' 에서 두번째 규칙 'camelcase variable'으로 변환함
