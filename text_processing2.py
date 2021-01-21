@@ -29,6 +29,9 @@ def digits_to_words(input_string):
 
 
 def to_camel_case(underscore_str):
+    if '_' not in underscore_str:
+        return underscore_str
+    
     underscore_str = ' '.join(underscore_str.strip('_').split('_')).split()
 
     camelcase_str = ''
@@ -42,8 +45,7 @@ def to_camel_case(underscore_str):
     
             camelcase_str += temp
     else:
-        if underscore_str:
-            camelcase_str = ''.join(underscore_str)
+        camelcase_str = ''.join(underscore_str)
 
     """
     이 문제에서 첫번째 규칙 'underscore variable' 에서 두번째 규칙 'camelcase variable'으로 변환함
